@@ -1,0 +1,438 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Mobile Browser Header */
+        .mobile-header {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .mobile-header .left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mobile-header .battery {
+            background-color: #333;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .mobile-header .right {
+            font-size: 12px;
+        }
+
+        /* Browser Navigation */
+        .browser-nav {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .browser-nav .left {
+            display: flex;
+            gap: 16px;
+        }
+
+        .browser-nav .center {
+            flex: 1;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Main Navigation */
+        .main-nav {
+            background-color: #2a2a2a;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-left a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .contact-btn {
+            background-color: #d4af37;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            color: #cccccc;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        /* Sunburst Graphics */
+        .sunburst {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px;
+            height: 200px;
+            opacity: 0.3;
+        }
+
+        .sunburst::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: #d4af37;
+            border-radius: 50%;
+        }
+
+        .sunburst-ray {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 80px;
+            background-color: #d4af37;
+            transform-origin: bottom center;
+        }
+
+        /* Contact Information */
+        .contact-section {
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 8px;
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .contact-label {
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .contact-value {
+            background-color: #333;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        /* Policy Sections */
+        .policy-section {
+            padding: 40px 20px;
+        }
+
+        .policy-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .read-policy-btn {
+            background-color: transparent;
+            border: 1px solid #555;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .policy-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .policy-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .policy-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 18px;
+        }
+
+        .policy-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .policy-content p {
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 20px;
+            position: relative;
+        }
+
+        .testimonials h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .testimonials-subtitle {
+            color: #cccccc;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-user {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #555;
+        }
+
+        .user-info h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .user-info p {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .twitter-icon {
+            color: #1da1f2;
+            font-size: 16px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 12px;
+        }
+
+        .star {
+            color: #ffd700;
+            font-size: 14px;
+        }
+
+        .testimonial-text {
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .testimonials .sunburst {
+            right: -100px;
+            bottom: 100px;
+            opacity: 0.2;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .faq-section h2 {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .policy-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+       .mobile-menu-toggle{
+        margin-left: 20px;
+       }
+       .mobile-menu-toggle i{
+        color: var(--text-primary);
+        font-size: 13px;
+        margin-bottom: 10px;
+       }
+      
+        }
+                @media (max-width: 768px) {
+       .hero{
+        display: flex;
+        flex-direction: column;
+       }
+                }
+        @media (min-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .hero {
+                padding: 80px 40px;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .sunburst {
+                width: 300px;
+                height: 300px;
+                right: -100px;
+            }
+        }
+        .hero{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .img-con img{
+            width: 400px;
+            height: 400px;
+
+        }
