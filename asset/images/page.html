@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Style.Loom — FAQ</title>
+    <style>
+      :root{
+        --bg:#0a0a0a; --bg-2:#0f0f0f; --card:#121212; --border:#1f1f1f;
+        --text:#f3f3f3; --muted:#a3a3a3; --pill:#171717; --beige:#d9c5b4;
+      }
+      *{box-sizing:border-box}
+      html,body{height:100%}
+      body{
+        margin:0; background:var(--bg); color:var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        line-height:1.6;
+      }
+      .container{max-width:1120px;margin-inline:auto;padding-inline:16px}
+      a{color:inherit;text-decoration:none}
+
+      /* Header */
+      .site-header{position:sticky;top:0;z-index:10;background:rgba(10,10,10,.85);backdrop-filter:saturate(1.1) blur(6px);border-bottom:1px solid var(--border)}
+      .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 16px}
+      .brand{font-weight:800;letter-spacing:.2px;font-size:22px}
+      .brand .dot{color:#9ca3af}
+      .links{display:none;gap:20px;color:#c9c9c9}
+      .links a:hover{color:#fff}
+      @media (min-width:768px){.links{display:flex}}
+
+      /* FAQ */
+      .section-title{font-size:26px;font-weight:700;letter-spacing:.3px;margin:0 0 6px}
+      .section-desc{color:var(--muted);font-size:14px;margin:0 0 16px}
+      .faq{position:relative;padding:40px 0 24px}
+      .starburst{
+        position:absolute;right:-20px;top:-24px;width:240px;height:240px;opacity:.55;display:none;
+        background:
+          radial-gradient(closest-side, #0000 78%, #c7b29e 80% 82%, #0000 84%) 0 0 / 60px 60px,
+          radial-gradient(closest-side, #0000 78%, #c7b29e 80% 82%, #0000 84%) 30px 30px / 60px 60px,
+          radial-gradient(closest-side, #0000 60%, #c7b29e 62% 64%, #0000 66%) 15px 15px / 60px 60px;
+        border-radius:50%;
+      }
+      @media (min-width:900px){.starburst{display:block}}
+
+      .pills{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px}
+      .pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);background:var(--pill);color:#d0d0d0;border-radius:999px;font-size:13px}
+      .pill.is-active{background:#262626;color:#fff}
+
+      .faq-grid{display:grid;gap:12px;grid-template-columns:1fr}
+      @media (min-width:768px){.faq-grid{grid-template-columns:1fr 1fr}}
+      .card{background:linear-gradient(180deg, var(--bg-2), #0b0b0b);border:1px solid var(--border);border-radius:12px;padding:16px;transition:.2s ease}
+      .card:hover{background:#121212}
+      .q{margin:0 0 6px;font-size:15px;font-weight:600;color:#fafafa}
+      .a{margin:0;color:#bdbdbd;font-size:14px;line-height:1.7}
+
+      /* Promo */
+      .promo{position:relative;background:var(--beige);color:#0c0c0c;border:1px solid #c5b1a1;border-radius:14px;padding:18px;overflow:hidden;margin:20px 0 28px}
+      @media (min-width:640px){.promo{padding:24px}}
+      .promo h3{margin:0 0 6px;font-weight:800;font-size:20px}
+      @media (min-width:640px){.promo h3{font-size:24px}}
+      .promo p{margin:0 0 12px;color:#1f1f1f}
+      .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:1px solid #0c0c0c;background:#0c0c0c;color:#fff;font-size:14px}
+      .btn:focus{outline:2px solid #000;outline-offset:2px}
+      .promo::after{
+        content:"";position:absolute;left:auto;right:-80px;bottom:-80px;width:300px;height:300px;opacity:.18;pointer-events:none;
+        background:
+          radial-gradient(closest-side, #0000 78%, #000 80% 82%, #0000 84%) 0 0 / 60px 60px,
+          radial-gradient(closest-side, #0000 78%, #000 80% 82%, #0000 84%) 30px 30px / 60px 60px,
+          radial-gradient(closest-side, #0000 60%, #000 62% 64%, #0000 66%) 15px 15px / 60px 60px;
+        border-radius:50%;
+      }
+
+      /* Tags scroller */
+      .tags{border:1px solid var(--border);border-radius:10px;background:#0b0b0b;padding:12px;overflow:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;color:#cfcfcf}
+      .tags::-webkit-scrollbar{height:0}
+      .tag{display:inline-block;margin-inline:8px 18px;padding:8px 12px;border:1px solid var(--border);border-radius:999px;background:#121212;font-size:12px}
+      .dot{color:#5e5e5e;margin:0 6px}
+
+      /* Footer */
+      .site-footer{border-top:1px solid var(--border);margin-top:18px;background:var(--bg)}
+      .footer-wrap{padding:40px 16px}
+      .foot-head{display:flex;flex-direction:column;gap:16px;align-items:flex-start;justify-content:space-between;margin-bottom:28px}
+      @media (min-width:768px){.foot-head{flex-direction:row;align-items:center}}
+      .brand-big{font-size:42px;font-weight:900;line-height:1}
+      @media (min-width:640px){.brand-big{font-size:56px}}
+      .brand-big .dot{color:#b3b3b3}
+      .socials{display:flex;gap:10px}
+      .icon-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:#121212;color:#e5e5e5;display:inline-grid;place-items:center;font-size:12px}
+
+      .footer-grid{display:grid;gap:18px}
+      @media (min-width:768px){.footer-grid{grid-template-columns:1fr 1fr 1fr}}
+      .foot-title{font-size:14px;margin:0 0 8px;color:#e8e8e8}
+      .foot-links{list-style:none;padding:0;margin:0}
+      .foot-links a{color:#bdbdbd;font-size:14px}
+      .foot-links a:hover{color:#fff}
+
+      .newsletter{display:flex;gap:8px}
+      .input{flex:1;border:1px solid var(--border);background:#101010;color:#f5f5f5;padding:10px 12px;border-radius:10px;font-size:14px}
+      .submit{border:1px solid #d4d4d4;background:#e7e7e7;color:#0a0a0a;border-radius:10px;padding:10px 12px}
+
+      .legal{margin-top:24px;padding-top:16px;border-top:1px dashed var(--border);color:#8b8b8b;font-size:12px;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav" aria-label="Main navigation">
+        <div class="brand">Style<span class="dot">.Loom</span></div>
+        <nav class="links">
+          <a href="#">Home</a>
+          <a href="#">Products</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="faq container" aria-labelledby="faq-title">
+        <div class="starburst" aria-hidden="true"></div>
+        <h2 id="faq-title" class="section-title">HAVE QUESTIONS? WE HAVE ANSWERS.</h2>
+        <p class="section-desc">Ease into the world of StyleLoom with clarity. Our FAQs cover a spectrum of topics.</p>
+
+        <div class="pills" role="tablist" aria-label="FAQ categories">
+          <span class="pill">All</span>
+          <span class="pill">Ordering</span>
+          <span class="pill is-active">Shipping</span>
+          <span class="pill">Returns</span>
+          <span class="pill">Support</span>
+        </div>
+
+        <div class="faq-grid">
+          <article class="card">
+            <h3 class="q">How can I place an order on StyleLoom?</h3>
+            <p class="a">Browse the site, add items to your cart, and proceed to checkout. Follow the prompts to enter your details and complete your purchase.</p>
+          </article>
+          <article class="card">
+            <h3 class="q">Can I modify or cancel my order after placing it?</h3>
+            <p class="a">Once an order is confirmed, modifications or cancellations may not be possible. Please review your order carefully before completing the purchase.</p>
+          </article>
+          <article class="card">
+            <h3 class="q">What payment methods do you accept?</h3>
+            <p class="a">We accept credit/debit cards, net banking, and select digital wallets. Choose the option that suits you best during checkout.</p>
+          </article>
+          <article class="card">
+            <h3 class="q">How can I track my order?</h3>
+            <p class="a">Once dispatched, you'll receive a tracking number via email. Use it to follow your package in real time on our website.</p>
+          </article>
+          <article class="card">
+            <h3 class="q">How do I initiate a return?</h3>
+            <p class="a">Visit our Returns page and follow the provided instructions. Ensure your item meets the return criteria, and our team will guide you through the process.</p>
+          </article>
+          <article class="card">
+            <h3 class="q">Do you offer exchanges for products?</h3>
+            <p class="a">We don't offer direct exchanges right now. If you'd like a different item, please initiate a return and place a new order.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="promo" role="region" aria-labelledby="promo-title">
+          <h3 id="promo-title">ELEVATE YOUR WARDROBE</h3>
+          <p>Don't miss out—experience chic elegance delivered to your doorstep. Your style journey begins here.</p>
+          <a href="#" class="btn" aria-label="Shop Now">Shop Now ▸</a>
+        </div>
+      </section>
+
+      <section class="container" aria-label="Popular categories">
+        <div class="tags">
+          <span class="tag">TOP</span><span class="dot">•</span>
+          <span class="tag">T-SHIRT</span><span class="dot">•</span>
+          <span class="tag">LONG-SLEEVE T-SHIRT</span><span class="dot">•</span>
+          <span class="tag">RAGLAN SLEEVE SHIRT</span><span class="dot">•</span>
+          <span class="tag">CROP TOP</span><span class="dot">•</span>
+          <span class="tag">V-NECK SHIRT</span><span class="dot">•</span>
+          <span class="tag">MUSCLE TEE</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div class="foot-head">
+          <div class="brand-big">Style<span class="dot">.Loom</span></div>
+          <div class="socials" aria-label="Social links">
+            <button class="icon-btn" aria-label="Instagram">IG</button>
+            <button class="icon-btn" aria-label="X">X</button>
+            <button class="icon-btn" aria-label="Dribbble">Dr</button>
+            <button class="icon-btn" aria-label="Behance">Bē</button>
+          </div>
+        </div>
+
+        <div class="footer-grid">
+          <div>
+            <h4 class="foot-title">Home</h4>
+            <ul class="foot-links">
+              <li><a href="#">Why Us</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">FAQ's</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="foot-title">Products</h4>
+            <ul class="foot-links">
+              <li><a href="#">Menswear</a></li>
+              <li><a href="#">Womenswear</a></li>
+              <li><a href="#">Kidswear</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="foot-title">Subscribe to Newsletter</h4>
+            <form class="newsletter" action="#" method="post">
+              <label for="email" class="sr-only">Email</label>
+              <input id="email" class="input" type="email" placeholder="Your Email" required />
+              <button class="submit" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="legal">
+          <p>© 2024 StyleLoom. All rights reserved.</p>
+          <p><a href="#">Terms & Conditions</a> · <a href="#">Privacy Policy</a></p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      
+    </script>
+  </body>
+</html>
